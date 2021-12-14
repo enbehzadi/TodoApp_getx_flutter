@@ -1,4 +1,4 @@
-import 'package:TodoApp/controller/splash_controller.dart';
+import 'package:TodoApp2/controller/splash_controller.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:get/get.dart';

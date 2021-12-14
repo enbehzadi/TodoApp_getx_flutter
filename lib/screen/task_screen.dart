@@ -1,7 +1,7 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
-import 'package:TodoApp/controller/database_controller.dart';
-import 'package:TodoApp/controller/task_controller.dart';
-import 'package:TodoApp/model/task_model.dart';
+import 'package:TodoApp2/controller/database_controller.dart';
+import 'package:TodoApp2/controller/task_controller.dart';
+import 'package:TodoApp2/model/task_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:progress_indicator_button/progress_button.dart';

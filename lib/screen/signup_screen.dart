@@ -1,5 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
-import 'package:TodoApp/controller/signup_controller.dart';
+import 'package:TodoApp2/controller/signup_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -32,7 +32,7 @@ class SignupScreen extends StatelessWidget {
                 borderRadius:
                     const BorderRadius.vertical(bottom: Radius.circular(20)),
               ),
-              child: Text('Sign Up'.tr,
+              child: Text('SignUp'.tr,
                   style: TextStyle(
                       color: whiteColor,
                       fontSize: 35,
@@ -98,7 +98,8 @@ class SignupScreen extends StatelessWidget {
                           return "incompataible passwords".tr;
                         }
                     },
-                        controller: signupcontroller.repeat_password_contoroller,labelText: " Repeat Password",obscureText: true, icon: Icons.lock_outline)
+                        controller: signupcontroller.repeat_password_contoroller
+                        ,labelText: "Repeat Password".tr,obscureText: true, icon: Icons.lock_outline)
                 ),
 
                 Container(

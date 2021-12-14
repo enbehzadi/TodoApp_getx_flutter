@@ -1,12 +1,10 @@
 // ignore_for_file: avoid_single_cascade_in_expression_statements
-import 'package:TodoApp/model/task_model.dart';
+import 'package:TodoApp2/model/task_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'database_controller.dart';
 class TaskController extends GetxController {
   RxBool loading=true.obs;
   RxList <task_model> tasks=<task_model>[].obs;
