@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
-
-import 'package:TodoApp/controller/database_controller.dart';
-import 'package:TodoApp/controller/login_controller.dart';
-import 'package:TodoApp/controller/task_controller.dart';
+import 'package:TodoApp2/controller/database_controller.dart';
+import 'package:TodoApp2/controller/login_controller.dart';
+import 'package:TodoApp2/controller/task_controller.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:progress_indicator_button/progress_button.dart';
 import '../constants.dart';
@@ -164,7 +162,7 @@ class LoginScreen extends StatelessWidget {
                 child:new Container(
                   margin: EdgeInsets.only(top: 15,bottom: 20),
                   child:
-                  ButtonWidget(title: "Sign Up".tr,hasBorder: true,),
+                  ButtonWidget(title: "SignUp".tr,hasBorder: true,),
                 ),
               ),
               ],
