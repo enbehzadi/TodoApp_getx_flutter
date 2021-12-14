@@ -119,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                       {
 
                       }
-                    },controller: logincontroller.password_contoroller,labelText: "password".tr,
+                    },controller: logincontroller.password_contoroller,labelText: "Password".tr,
                       icon: Icons.lock_outline,obscureText: true,
                       suffixIcon: Icons.visibility_off,
                     )
