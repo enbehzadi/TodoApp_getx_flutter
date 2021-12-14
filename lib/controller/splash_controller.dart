@@ -1,9 +1,11 @@
+import 'package:TodoApp/screen/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/controller/database_controller.dart';
-import 'package:flutter_app_todo/screen/login_screen.dart';
+
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+
+import 'database_controller.dart';
 class SplashController extends GetxController {
   @override
   void onInit() {

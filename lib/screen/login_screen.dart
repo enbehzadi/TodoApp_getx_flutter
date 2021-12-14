@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
+import 'package:TodoApp/controller/database_controller.dart';
+import 'package:TodoApp/controller/login_controller.dart';
+import 'package:TodoApp/controller/task_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/controller/database_controller.dart';
-import 'package:flutter_app_todo/controller/login_controller.dart';
-import 'package:flutter_app_todo/controller/task_controller.dart';
+
 import 'package:get/get.dart';
 import 'package:progress_indicator_button/progress_button.dart';
 import '../constants.dart';
@@ -20,7 +21,9 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor:Get.isDarkMode ? Colors.black54 : mediumBlue,
+        centerTitle: true,
+        title: Text("TodoApp"),
+        // backgroundColor:Get.isDarkMode ? Colors.black54 : mediumBlue,
         leading:PopupMenuButton<int>(
           onSelected: (item) =>
               taskController.popupmenu_click(item),
@@ -45,7 +48,6 @@ class LoginScreen extends StatelessWidget {
             PopupMenuItem<int>(value: 1, child: ListTile(
               leading: const Icon(Icons.translate_outlined),
               title: Text('Language'.tr,style: const TextStyle(fontSize: 13)),
-
             ),
 
             ),

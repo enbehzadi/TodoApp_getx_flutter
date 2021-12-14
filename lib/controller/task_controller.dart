@@ -1,20 +1,23 @@
 // ignore_for_file: avoid_single_cascade_in_expression_statements
+import 'package:TodoApp/model/task_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/controller/database_controller.dart';
-import 'package:flutter_app_todo/model/task_model.dart';
 import 'package:get/get.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'database_controller.dart';
 class TaskController extends GetxController {
   RxBool loading=true.obs;
   RxList <task_model> tasks=<task_model>[].obs;
   RxBool idDark=false.obs;
+  bool idLocale=false;
+
   @override
   void onInit() {
-
     getAllTask();
     setIddark();
+    setLocale();
   }
 
   // ThemeData get theme => isDark ? ThemeData.dark() : ThemeData.light();
@@ -164,51 +167,63 @@ class TaskController extends GetxController {
       Get.snackbar("Error", "Dont Logout!!",backgroundColor:Colors.red);
     }
   }
-  popupmenu_click(int item){
-    switch (item) {
-      case 0:
+  popupmenu_click(int item)
+  {
+switch (item) {
+  case 0:
 
-        break;
-      case 1:
-        changeLocale();
-        break;
-      case 2:
-        Get.defaultDialog(
-            title:"About" ,
-            middleText: "Developer by flutter(Getx) \n"
-                "Programmer Mojtaba Behzadi\n"
-                "December 2021",
-            // set actions for click button
-            onConfirm: () {
-              Get.back();
-            },
-            // set custome text for buttons
-            textConfirm: "close",
-            barrierDismissible: true,
-        );
-        break;
+    break;
+  case 1:
+    changeLocale();
+    break;
+  case 2:
+    Get.defaultDialog(
+        title:"About" ,
+        middleText: "Developer by flutter(Getx) \n"
+            "Programmer Mojtaba Behzadi\n"
+            "December 2021",
+        // set actions for click button
+        onConfirm: () {
+          Get.back();
+        },
+        // set custome text for buttons
+        textConfirm: "close",
+        barrierDismissible: true,
+    );
+    break;
 
-      case 3:
-        logout();
-        break;
-    }
+  case 3:
+    logout();
+    break;
+}
   }
-
-    changeLocale()async{
-
-       DatabaseController database=Get.put(DatabaseController());
-
-      if(database.restoreStateTranslate()=="fa")
-      {
-        Get.updateLocale( Locale('en','US'));
-        database.storeStateTranslate("en");
-
-      }
-      else
-      {
-
-        Get.updateLocale(Locale('fa','IR'));
-        database.storeStateTranslate("fa");
-      }
-    }
+setLocale() async
+{
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  final SharedPreferences prefs=await _prefs;
+  if(prefs.getString("locale")=="en")
+  {
+    Get.updateLocale( Locale('en','US'));
+    prefs.setString("locale", "en");
   }
+  else
+  {
+    Get.updateLocale(Locale('fa','IR'));
+    prefs.setString("locale", "fa");
+  }
+}
+changeLocale()async{
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  final SharedPreferences prefs=await _prefs;
+  if(prefs.getString("locale")=="en")
+  {
+    Get.updateLocale( Locale('fa','IR'));
+    prefs.setString("locale", "fa");
+  }
+  else
+  {
+    Get.updateLocale(  Locale('en','US'));
+    prefs.setString("locale", "en");
+  }
+  }
+}

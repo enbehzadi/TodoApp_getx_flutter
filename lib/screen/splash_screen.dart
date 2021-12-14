@@ -1,5 +1,5 @@
+import 'package:TodoApp/controller/splash_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/controller/splash_controller.dart';
 import '../constants.dart';
 import 'package:get/get.dart';
 class SplashScreen extends StatelessWidget {

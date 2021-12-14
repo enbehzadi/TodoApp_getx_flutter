@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
+import 'package:TodoApp/controller/signup_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/controller/signup_controller.dart';
 import 'package:get/get.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:progress_indicator_button/progress_button.dart';

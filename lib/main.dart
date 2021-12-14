@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_todo/screen/signup_screen.dart';
-import 'package:flutter_app_todo/screen/task_screen.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'Internationalization/messages.dart';
 import 'screen/login_screen.dart';
+import 'screen/signup_screen.dart';
 import 'screen/splash_screen.dart';
+import 'screen/task_screen.dart';
 void main() async{
   await GetStorage.init();
   runApp(MyApp());
