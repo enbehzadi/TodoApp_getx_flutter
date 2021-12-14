@@ -5,4 +5,4 @@ this is sample for Getx in flutter
 this project use
 Flutter Getx
 Get_Storage
-##By mojtaba behzadi December 2021
+##By mojtaba behzadi December 2021# flutter_app_todo
