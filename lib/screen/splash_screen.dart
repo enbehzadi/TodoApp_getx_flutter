@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
         Align(
           alignment: Alignment.center,
         child:
-        Text("Todo App",
+        Text("TodoApp",
           style: TextStyle(fontSize: 35,color: Colors.white,
           fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,),
