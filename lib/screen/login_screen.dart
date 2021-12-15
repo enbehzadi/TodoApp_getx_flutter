@@ -105,7 +105,10 @@ class LoginScreen extends StatelessWidget {
                           return "incorrect email".tr;
                         }
                     },
-                        controller: logincontroller.email_contoroller,labelText: "Email".tr, icon: Icons.email_outlined)
+
+                        controller: logincontroller.email_contoroller,
+                        labelText: "Email".tr,
+                        icon: Icons.email_outlined)
                 ),
                 new Container(
                     margin: EdgeInsets.only(top: 10),

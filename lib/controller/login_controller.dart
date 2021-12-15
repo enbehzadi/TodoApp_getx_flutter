@@ -28,7 +28,7 @@ class LoginController extends GetxController {
         final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
         final SharedPreferences prefs=await _prefs;
         prefs.setString("user_token", jsonResponse['token']);
-        Get.offAndToNamed("/task_screen");
+        Get.offAllNamed("/task_screen");
 
       } else {
         Get.snackbar("Error", "input information carefully!!".tr,backgroundColor:Colors.red);

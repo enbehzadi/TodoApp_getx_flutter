@@ -146,29 +146,11 @@ class TaskController extends GetxController {
   logout() async {
     final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
     final SharedPreferences prefs = await _prefs;
-    var userToken = prefs.getString("user_token").toString();
-    Map <String, String>header = {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer $userToken",
-    };
-    var url = "https://api-nodejs-todolist.herokuapp.com/user/logout";
-    // Await the http get response, then decode the json-formatted response.
-    var response = await http.post(Uri.parse(url), headers: header);
-    if (response.statusCode == 200) {
-      var jsonResponse =
-      convert.jsonDecode(response.body);
-      print('****** ${jsonResponse}');
-      Get.snackbar(
-          "Success!", "Logout Successfully", backgroundColor: Colors.green);
-      Future.delayed(Duration(milliseconds: 800), () {
-        Get.offAndToNamed("/login_screen");
-      });
-    } else {
-      Get.snackbar("Error", "Dont Logout!!", backgroundColor: Colors.red);
-    }
+    prefs.setString("user_token","").toString();
+    Get.offAllNamed("/login_screen");
   }
 
-  
+
   popupmenuClick(int item) {
     switch (item) {
       case 0:

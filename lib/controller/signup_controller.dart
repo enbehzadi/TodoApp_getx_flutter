@@ -37,17 +37,20 @@ class SignupController extends GetxController {
         var jsonResponse = convert.jsonDecode(response.body) ;
         print (jsonResponse);
         Get.snackbar("Success!", "Registered Successfully",backgroundColor:Colors.green);
-
-
           final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
           final SharedPreferences prefs=await _prefs;
           prefs.setString("user_token", jsonResponse['token']);
-          Get.offAndToNamed("/task_screen");
+        prefs.setString("email",email);
+        Get.snackbar("Successfull", "Successfull Registered!!",backgroundColor:Colors.green);
 
-      } else {
-        Get.snackbar("Error", "Not Registered!!",backgroundColor:Colors.red);
+        Get.offAllNamed("/task_screen");
+
+      }
+      else {
+        Get.snackbar("Error",
+            "Not Registered!!",
+            backgroundColor:Colors.red);
         print('Request failed with status: ${response.statusCode}.');
-
       }
   }
 
