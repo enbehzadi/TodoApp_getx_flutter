@@ -43,9 +43,10 @@ class SplashController extends GetxController {
     }
 
   }
+
   setTranslate()async{
     DatabaseController dbs=Get.put(DatabaseController());
-    if(dbs.restoreStateTranslate()=="fa")
+    if(dbs.restoreStateTranslate())
     {
       Get.updateLocale(Locale('fa','IR'));
     }
@@ -53,6 +54,7 @@ class SplashController extends GetxController {
     {
       Get.updateLocale(Locale('en','Us'));
     }
+
   }
    check_user_token(String userToken)async{
 

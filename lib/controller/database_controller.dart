@@ -16,12 +16,12 @@ class DatabaseController extends GetxController {
     return dark;
   }
 
-  void storeStateTranslate(String translate) {
+  void storeStateTranslate(bool translate) {
     box.write('translate', translate);
   }
-  String restoreStateTranslate() {
-    final dark = box.read('translate') ?? {};
-    return dark;
+  bool restoreStateTranslate() {
+    final translate = box.read('translate') ?? {};
+    return translate;
   }
 
 }

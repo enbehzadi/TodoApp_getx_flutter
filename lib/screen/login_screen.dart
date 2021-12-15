@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
         // backgroundColor:Get.isDarkMode ? Colors.black54 : mediumBlue,
         leading:PopupMenuButton<int>(
           onSelected: (item) =>
-              taskController.popupmenu_click(item),
+              taskController.popupmenuClick(item),
           itemBuilder: (context) => [
             PopupMenuItem<int>(value: 0,
               child:

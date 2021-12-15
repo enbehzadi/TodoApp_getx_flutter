@@ -17,7 +17,7 @@ class TaskScreen extends StatelessWidget {
         title:Text("Task Screen".tr),
         centerTitle: true,
         leading:PopupMenuButton<int>(
-          onSelected: (item) => taskController.popupmenu_click(item),
+          onSelected: (item) => taskController.popupmenuClick(item),
           itemBuilder: (context) => [
             PopupMenuItem<int>(value: 0,
               child:

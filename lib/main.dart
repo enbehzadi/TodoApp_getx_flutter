@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       translations: Messages(),// your translations
-      locale: Get.deviceLocale,
       fallbackLocale: Locale('en', 'US'),
       initialRoute: '/',
       getPages: [

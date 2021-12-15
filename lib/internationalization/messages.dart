@@ -14,7 +14,11 @@ class Messages extends Translations {
       'Forget Password': 'Forget Password',
       'Sign Up': 'Sign Up',
       "input information carefully!!": 'input information carefully!!',
-
+      "Developer by flutter(Getx) \n"
+          "Programmer Mojtaba Behzadi\n"
+          "December 2021":"Developer by flutter(Getx) \n"
+  "Programmer Mojtaba Behzadi\n"
+  "December 2021",
       //signup screen
       'please enter name': 'please enter name',
       'Name': 'Name',
@@ -46,6 +50,10 @@ class Messages extends Translations {
       'Forget Password': 'فراموشی رمز عبور',
       'SignUp': 'ثبت نام',
       "input information carefully!!": 'اطلاعات را با دقت وارد کنید',
+"Developer by flutter(Getx) \n"
+"Programmer Mojtaba Behzadi\n"
+"December 2021":"ساخته شده با استفاده از فلاتر (getx) "
+"توسط مجتبی بهزادی در پاییز 1400",
       //signup screen
       'please enter name': 'لطفا نام را وارد کنید',
       'Name': 'نام',
