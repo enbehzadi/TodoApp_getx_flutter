@@ -17,7 +17,7 @@ class SplashController extends GetxController {
   }
 
   void _handelScreen()async{
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(milliseconds: 1200));
     final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
     final SharedPreferences prefs=await _prefs;
     if(prefs.getString("user_token")==null)

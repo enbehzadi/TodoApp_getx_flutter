@@ -45,6 +45,7 @@ class LoginScreen extends StatelessWidget {
             ),
             PopupMenuItem<int>(value: 1, child: ListTile(
               leading: const Icon(Icons.translate_outlined),
+
               title: Text('Language'.tr,style: const TextStyle(fontSize: 13)),
             ),
 

@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="enbehzadi.flutterapp.flutter_app_todo">
-   <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
         android:label="TodoApp"
         android:icon="@mipmap/ic_launcher">
         <activity
